@@ -1,0 +1,16 @@
+server:
+  port: 8001
+
+#配置dubbo 和 zookeeper相关
+#服务应用名字
+dubbo:
+  application:
+    name: provider_server
+#注册中心地址,根据自己的zookeeper 提供的端口号配置
+  registry:
+    address: zookeeper://127.0.0.1:2181
+#那些服务要被注册,
+  scan:
+    base-packages: com.zh
+  protocol:
+    port: 20880

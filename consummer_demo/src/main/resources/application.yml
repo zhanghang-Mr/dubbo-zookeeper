@@ -1,0 +1,16 @@
+server:
+  port: 8003
+
+#配置dubbo 和 zookeeper相关
+#服务应用名字
+dubbo:
+  application:
+    name: consummer_server
+  #注册中心地址,根据自己的zookeeper 提供的端口号配置
+  registry:
+    address: zookeeper://127.0.0.1:2181
+      #那些服务要被注册,
+  scan:
+    base-packages: com.zh
+  protocol:          #dubbo监控暴露端口，如果有多个提供者，端口必须不同
+    port: 20881
